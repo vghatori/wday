@@ -1,0 +1,151 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Updock&display=swap');
+
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+}
+
+.App {
+  text-align: center;
+  width: 100%;
+  padding: 2rem;
+  background-color: #fff0f5;
+  min-height: 100vh;
+  
+  font-size:xx-large;
+}
+
+h1 {
+  color: #d63384;
+  margin-bottom: 1rem;
+ font-family: "Imperial Script", cursive !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-image {
+  width: 100px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.wish {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #f06292;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #ec407a;
+}
+.shiny-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.shiny-image {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Hiệu ứng ánh sáng quét */
+.shine-effect {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine 2.5s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.sparkle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(rgb(237, 237, 123), rgba(255,255,255,0));
+  border-radius: 50%;
+  animation: sparkle 2s infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Sparkle vị trí khác nhau và delay khác nhau */
+.sparkle:nth-child(2) {
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+.sparkle:nth-child(3) {
+  top: 20%;
+  left: 80%;
+  animation-delay: 0.4s;
+}
+.sparkle:nth-child(4) {
+  top: 60%;
+  left: 70%;
+  animation-delay: 1s;
+}
+.sparkle:nth-child(5) {
+  top: 40%;
+  left: 30%;
+  animation-delay: 1.5s;
+}
+.sparkle:nth-child(6) {
+  top: 75%;
+  left: 10%;
+  animation-delay: 2s;
+}
+.sparkle:nth-child(7) {
+  top: 50%;
+  left: 50%;
+  animation-delay: 2.4s;
+}
+.sparkle:nth-child(8) {
+  top: 30%;
+  left: 60%;
+  animation-delay: 2.8s;
+}
