@@ -5,7 +5,7 @@ import './App.css'
 
 
 import GreetingCard from './GreetingCard.js'
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 
 createRoot(document.getElementById('root')!).render(

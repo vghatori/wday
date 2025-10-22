@@ -1,27 +1,11 @@
 // GreetingCard.js
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Input, Upload, Button, Typography, List, Avatar } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import './App.css'
 import { useNavigate } from 'react-router-dom';
 const { Title } = Typography;
 import { message } from 'antd';
-interface fileobj {
-    file: File,
-    fileList: [
-        {
-            uid: string,
-            lastModified: number,
-            lastModifiedDate: Date,
-            name: string,
-            size: number,
-            type: string,
-            percent: number,
-            originFileObj: File
-        }
-    ]
-}
-
 
 const data = [
   {
